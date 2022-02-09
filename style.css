@@ -1,0 +1,400 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: none;
+    box-sizing: border-box;
+    background: transparent;
+    font-family: inherit;
+}
+
+a{
+    text-decoration: none;
+}
+
+a img {
+    border: none;
+}
+
+button,
+a {
+    cursor: pointer;
+    color: inherit;
+}
+  
+textarea {
+    resize: none;
+}
+  
+button,
+textarea,
+select {
+    appearance: none !important;
+    border-radius: 0;
+}
+
+/*END OF CSS RESET*/
+
+
+/*-----------------*/
+
+
+/*COLOR PALETTE*/
+
+:root {
+    --lightgray: #181C29;
+    --darkgray: #111219;
+    --white: #f5f5f5;
+    --blue: #1557FE;
+    --green: #70e000;
+    --red: #d00000;
+}
+
+
+/*END OF COLOR PALETTE*/
+
+
+/*MATERIAL ICONS*/
+
+.material-icons{
+    color: whitesmoke;
+}
+
+/*END OF MATERIAL ICONS*/
+
+
+/*THE GRID LAYOUT*/
+
+
+#root{
+    display: grid;
+    grid-template-columns: 0.75fr 2.5fr 0.75fr;
+    grid-template-rows: 1fr;
+    font-family: 'Poppins', sans-serif;
+}
+
+aside{
+    grid-column-start: 1;
+    grid-column-end: 2;
+    background-color: var(--lightgray);
+    height: 100vh;
+    position: relative;
+}
+
+main{
+    grid-column-start: 2;
+    grid-column-end: 3;
+    background-color: var(--darkgray);
+    height: 100vh;
+    padding: 10px;
+}
+
+#profile{
+    grid-column-start: 3;
+    grid-column-end: 4;
+    background-color: var(--lightgray);
+    height: 100vh;
+}
+
+/*END OF THE GRID LAYOUT*/
+
+
+/*SIDEBAR CSS PROPERTIES*/
+
+
+#logo{
+    display: flex;
+    justify-content: flex-start;
+    margin: 40px 10px 40px 10px;
+    padding: 10px 10px 10px 10px;
+} 
+
+#nav a {
+    display: flex;
+    align-items: center;
+    margin: 10px;
+    padding: 10px;
+}
+
+#nav a:hover{
+    background-color: var(--blue);
+    border-radius: 10px;
+}
+
+#nav h3{
+    color: var(--white);
+    margin-left: 10px;
+    font-size: 1.1rem;
+    font-weight: 500;
+}
+
+/* Itt megkérdezni Richárdot a positions kapcsán.*/
+
+#update{
+    background-color: var(--darkgray);
+    margin: 40px;
+    padding: 20px;
+    display: block;
+    text-align: center;
+    border-radius: 10px;
+    position: absolute;
+    bottom: 20px;
+    left: 0;
+    right: 0;
+}
+
+#update span{
+    background-color: var(--blue);
+    font-size: 75px;
+    border-radius: 50%;
+}
+
+#update h3{
+    color: var(--white);
+    margin-top: 20px;
+    font-size: 1.2rem;
+    letter-spacing: 0.05em;
+}
+
+#update button{
+    background-color: var(--blue);
+    color: var(--white);
+    margin-top: 20px;
+    padding: 10px;
+    border-radius: 10px;
+    font-size: 1.1rem;
+}
+
+
+/*END OF SIDEBAR CSS PROPERTIES*/
+
+
+/*MAIN CSS PROPERTIES*/
+
+/*MAIN HEADER*/
+
+#main-header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 40px 0px 40px 0px;
+    padding: 10px 40px 10px 40px;
+}
+
+#main-header h3{
+    color: var(--white);
+    font-size: 1.5rem;
+    letter-spacing: 0.02em;
+}
+
+#main-header-search{
+    background-color: var(--lightgray);
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+#main-header-search input[type="search"]{
+    font-size: 1rem;
+    padding-left: 5px;
+}
+
+
+/*END OF MAIN HEADER*/
+
+
+/*MAIN STATS*/
+
+#main-balance{
+    margin: 0px 40px;
+    display: grid;
+    grid-template-columns: 3;
+    grid-template-rows: 1;
+    column-gap: 40px;
+}
+
+#main-balance div{
+    background-color: var(--lightgray);
+    padding: 40px;
+    border-radius: 10px;
+}
+
+#main-balance div h3{
+    color: var(--white);
+    padding: 5px 0px;
+    font-size: 1.5rem;
+    letter-spacing: 0.02em;
+}
+
+#main-balance div p{
+    color: var(--white);
+    font-size: 1rem;
+}
+
+#main-balance-1{
+    background-color: #70e000;
+    grid-column-start: 1;
+    grid-column-end: 2;
+}
+
+#main-balance-2{
+    background-color: #70e000;
+    grid-column-start: 2;
+    grid-column-end: 3;
+}
+
+#main-balance-3{
+    background-color: #70e000;
+    grid-column-start: 3;
+    grid-column-end: 4;
+}
+
+#change{
+    display: flex;
+    align-items: center;
+}
+
+#change span{
+    color: var(--green);
+    padding-right: 5px;
+}
+
+#changedown{
+    display: flex;
+    align-items: center;
+}
+
+#changedown span{
+    color: var(--red);
+    padding-right: 5px;
+}
+
+
+/*END OF MAIN STATS*/
+
+
+/*MAIN DATA CSS PROPERTIES*/
+
+#main-data{
+    margin: 0px 40px;
+    margin-top: 40px;
+    display: grid;
+    grid-template-columns: 12;
+    grid-template-rows: 1;
+    column-gap: 40px;
+}
+
+
+#main-data-1{
+    background-color: var(--lightgray);
+    grid-column-start: 1;
+    grid-column-end: 2;
+    border-radius: 10px;
+    padding: 40px;
+}
+
+#main-data-2{
+    background-color: var(--lightgray);
+    grid-column-start: 2;
+    grid-column-end: 13;
+    border-radius: 10px;
+    padding: 40px;
+}
+
+#main-data-1 span{
+    display: flex;
+    align-items: center;
+}
+
+#main-data-1 img{
+    border-radius: 10px;
+}
+
+#main-data-1 h3{
+    color: var(--white);
+    font-size: 1rem;
+    letter-spacing: 0.05em;
+}
+
+#main-data-1-name{
+    padding: 0px 10px;
+    color: var(--white);
+    font-size: 0.9rem;
+    letter-spacing: 0.05em;
+}
+
+#change, #changedown p{
+    color: var(--white)
+}
+
+#main-data-2{
+    background-color: var(--lightgray);
+    display: grid;
+    grid-template-columns: 2;
+    grid-template-rows: 1;
+    padding: 40px;
+    border-radius: 10px;
+}
+
+#main-data-2 h3{
+    color: var(--white);
+    padding: 10px 0px;
+    font-size: 1rem;
+    letter-spacing: 0.05em;
+}
+
+#main-data-2-diagram{
+    grid-column-start: 1;
+    grid-column-end: 2;
+}
+
+#main-data-2-categories{
+    grid-column-start: 2;
+    grid-column-end: 3;
+}
+
+#main-data-2-categories div{
+    background-color: #1557FE;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+
+#profile h3{
+    color: var(--white);
+    margin-top: 20px;
+    font-size: 1.2rem;
+    letter-spacing: 0.05em;
+    margin-left: 20px;
+}
+
+
+
+#profilename{
+    display: flex;
+    justify-content: flex-start;
+    margin: 40px 10px 40px 10px;
+    padding: 10px 10px 10px 10px;
+}
+
+#profilename img{
+    border-radius: 10px;
+}
+
+#profile-expanse{
+    color: var(--white);
+    display: flex;
+    justify-content: flex-start;
+}
+
+#profile-expanse p{
+    padding-left: 20px;
+}
+
+#profile-transactions{
+    display: flex;
+    margin-top: 20px;
+    margin-left: 20px;
+}
